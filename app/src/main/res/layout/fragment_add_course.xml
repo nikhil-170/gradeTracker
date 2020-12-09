@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".addCourseFragment" >
+
+    <EditText
+        android:id="@+id/courseNumEditTextId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:ems="10"
+        android:hint="@string/coursenum"
+        android:inputType="textPersonName"
+        android:text="@string/empty"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/courseNameET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/courseName"
+        android:inputType="textPersonName"
+        android:text="@string/empty"
+        app:layout_constraintEnd_toEndOf="@+id/courseNumEditTextId"
+        app:layout_constraintStart_toStartOf="@+id/courseNumEditTextId"
+        app:layout_constraintTop_toBottomOf="@+id/courseNumEditTextId" />
+
+    <EditText
+        android:id="@+id/creditHoursET"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="@string/credithours"
+        android:inputType="textPersonName"
+        android:text="@string/empty"
+        app:layout_constraintEnd_toEndOf="@+id/courseNameET"
+        app:layout_constraintStart_toStartOf="@+id/courseNameET"
+        app:layout_constraintTop_toBottomOf="@+id/courseNameET" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="118dp"
+        android:layout_height="23dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/coursegrade"
+        app:layout_constraintStart_toStartOf="@+id/creditHoursET"
+        app:layout_constraintTop_toBottomOf="@+id/creditHoursET" />
+
+    <RadioGroup
+        android:id="@+id/gradesRadioGrpId"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintStart_toEndOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="@+id/textView">
+
+        <RadioButton
+            android:id="@+id/rbAId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/a" />
+
+        <RadioButton
+            android:id="@+id/rbBId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/b" />
+
+        <RadioButton
+            android:id="@+id/rbCId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/c" />
+
+        <RadioButton
+            android:id="@+id/rbDId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/d" />
+
+        <RadioButton
+            android:id="@+id/rbFId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/f" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/submitButtonId"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="128dp"
+        android:text="@string/submit"
+        app:layout_constraintEnd_toEndOf="@+id/creditHoursET"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/gradesRadioGrpId" />
+
+    <TextView
+        android:id="@+id/cancelTV"
+        android:layout_width="65dp"
+        android:layout_height="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@string/cancel"
+        app:layout_constraintEnd_toEndOf="@+id/submitButtonId"
+        app:layout_constraintTop_toBottomOf="@+id/submitButtonId" />
+</androidx.constraintlayout.widget.ConstraintLayout>
